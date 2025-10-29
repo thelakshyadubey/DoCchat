@@ -1,0 +1,60 @@
+# Ignore node modules
+node_modules/
+*/node_modules/
+
+# Ignore Python virtual environment
+venv/
+env/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Ignore uploads directory
+uploads/
+*.log
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore build outputs
+build/
+dist/
+*.egg-info/
+.next/
+out/
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore model cache
+.cache/
+models/
+*.pt
+*.pth
+*.bin
+transformers_cache/
+
+# Ignore test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Ignore temporary files
+*.tmp
+temp/
+tmp/
+
+# Ignore MongoDB data
+data/
+*.lock
