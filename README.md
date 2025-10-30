@@ -98,53 +98,41 @@ User Request → Gemini API → (if fails) → Groq API → (if fails) → Local
 
 ### Screenshots
 
-**Homepage**
-
 ```
-┌─────────────────────────────────────────────────┐
-│  [DoCchat Logo]                    [Sign In]    │
-├─────────────────────────────────────────────────┤
-│                                                  │
-│     Transform Your Study Materials               │
-│     Into Knowledge with AI                       │
-│                                                  │
-│     [Get Started]                                │
-│                                                  │
-│  ┌────────┐  ┌────────┐  ┌────────┐           │
-│  │ Upload │  │ Process│  │ Learn  │           │
-│  └────────┘  └────────┘  └────────┘           │
-└─────────────────────────────────────────────────┘
+<img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/8d33d61a-e514-4866-8ae3-94a2c5518eb1" />
 ```
 
-**Dashboard**
-
 ```
-┌─────────────────────────────────────────────────┐
-│ [DoCchat]   Documents  🌙  Lakshya  Sign Out    │
-├─────────────────────────────────────────────────┤
-│                                                  │
-│  [Quick Chat] | [Organized (Subjects)]           │
-│                                                  │
-│  📁 Computer Science    📁 Mathematics          │
-│  📁 Physics            📁 Literature            │
-│                                                  │
-│  Recent Documents:                               │
-│  📄 NLP_Notes.pdf      📄 DataStructures.docx   │
-│  📄 Algorithms.pptx    📄 ML_Research.pdf       │
-│                                                  │
-│  [+ Upload Document]                             │
-└─────────────────────────────────────────────────┘
+<img width="1920" height="987" alt="image" src="https://github.com/user-attachments/assets/d5300564-c744-4eb3-b589-8868deda100b" />
 ```
 
-### Video Demo
+```
+<img width="1920" height="991" alt="image" src="https://github.com/user-attachments/assets/9cadc796-be00-4c51-bac5-ce863bdf0e3b" />
+```
 
-_[Link to demo video - Coming soon]_
+```
+<img width="1920" height="984" alt="image" src="https://github.com/user-attachments/assets/91148e18-31e8-48fc-b079-d80fd09daa75" />
+```
 
-### Live Demo
+```
+<img width="1920" height="987" alt="image" src="https://github.com/user-attachments/assets/8950b592-076c-47b5-bed4-558385e02009" />
+```
 
-_[Live deployment link - Coming soon]_
+```
+<img width="1920" height="986" alt="image" src="https://github.com/user-attachments/assets/9bfafac0-d939-4c5a-a765-1d46ecc5ecd5" />
+```
 
----
+```
+<img width="1920" height="990" alt="image" src="https://github.com/user-attachments/assets/a4f0fb10-6f84-4e5a-85ff-2c0611b172b6" />
+```
+
+```
+<img width="1920" height="986" alt="image" src="https://github.com/user-attachments/assets/47248ba1-d87d-413a-b8ff-a999df5305a5" />
+```
+
+```
+<img width="1920" height="984" alt="image" src="https://github.com/user-attachments/assets/6e753a35-d9f7-4f31-8f54-274b763c2561" />
+```
 
 ## 🛠️ Tech Stack
 
@@ -965,37 +953,13 @@ in the Software without restriction...
 
 ---
 
-## 🙏 Acknowledgments
-
-Special thanks to:
-
-- **HuggingFace** for pre-trained models
-- **FastAPI** team for the amazing framework
-- **React** team for the UI library
-- **Google** for Gemini API
-- **Groq** for fast LLM inference
-- **MongoDB** for flexible database
-- **Tailwind CSS** for utility-first styling
-- **NLTK & spaCy** for NLP tools
-
-### Built With ❤️ By
+### Built By
 
 **Lakshya Dubey**
 
 - Email: thelakshyadubey@gmail.com
 - GitHub: [@thelakshyadubey](https://github.com/thelakshyadubey)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-
-### Educational Context
-
-This project was developed as part of:
-
-- **Course**: Natural Language Processing
-- **Institution**: NMIMS
-- **Academic Year**: 2024-2025
-- **Semester**: VII
-
----
+- LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/lakshyadubey/)
 
 ## 📧 Contact & Support
 
@@ -1036,8 +1000,6 @@ If this project helped you, please consider:
 
 <div align="center">
 
-**Made with 💙 for students everywhere**
-
 _DoCchat - Making learning smarter, one document at a time._
 
 [⬆ Back to Top](#-docchat)
@@ -1045,7 +1007,3 @@ _DoCchat - Making learning smarter, one document at a time._
 </div>
 
 ---
-
-**Last Updated**: October 29, 2025  
-**Version**: 1.0.0  
-**Status**: ✅ Production Ready
