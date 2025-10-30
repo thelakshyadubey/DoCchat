@@ -98,41 +98,41 @@ User Request → Gemini API → (if fails) → Groq API → (if fails) → Local
 
 ### Screenshots
 
-```
+
 <img width="1919" height="987" alt="image" src="https://github.com/user-attachments/assets/8d33d61a-e514-4866-8ae3-94a2c5518eb1" />
-```
 
-```
+
+
 <img width="1920" height="987" alt="image" src="https://github.com/user-attachments/assets/d5300564-c744-4eb3-b589-8868deda100b" />
-```
 
-```
+
+
 <img width="1920" height="991" alt="image" src="https://github.com/user-attachments/assets/9cadc796-be00-4c51-bac5-ce863bdf0e3b" />
-```
 
-```
+
+
 <img width="1920" height="984" alt="image" src="https://github.com/user-attachments/assets/91148e18-31e8-48fc-b079-d80fd09daa75" />
-```
 
-```
+
+
 <img width="1920" height="987" alt="image" src="https://github.com/user-attachments/assets/8950b592-076c-47b5-bed4-558385e02009" />
-```
 
-```
+
+
 <img width="1920" height="986" alt="image" src="https://github.com/user-attachments/assets/9bfafac0-d939-4c5a-a765-1d46ecc5ecd5" />
-```
 
-```
+
+
 <img width="1920" height="990" alt="image" src="https://github.com/user-attachments/assets/a4f0fb10-6f84-4e5a-85ff-2c0611b172b6" />
-```
 
-```
+
+
 <img width="1920" height="986" alt="image" src="https://github.com/user-attachments/assets/47248ba1-d87d-413a-b8ff-a999df5305a5" />
-```
 
-```
+
+
 <img width="1920" height="984" alt="image" src="https://github.com/user-attachments/assets/6e753a35-d9f7-4f31-8f54-274b763c2561" />
-```
+
 
 ## 🛠️ Tech Stack
 
