@@ -267,8 +267,8 @@ Before you begin, ensure you have:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/thelakshyadubey/DocChat.git
-cd DocChat
+git clone https://github.com/thelakshyadubey/DoCchat.git
+cd DoCchat
 
 # 2. Setup backend
 cd backend
