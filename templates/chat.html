@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="chat-container">
+    <h2>Document Chat</h2>
+    <a href="{{ url_for('dashboard') }}" class="back-link">← Back to documents</a>
+    
+    <div class="chat-box" id="chat-box">
+        <!-- Chat messages will appear here -->
+    </div>
+    
+    <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Ask a question about your documents...">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+
+<script>
+    // Initialize docIds from Flask template
+    const docIds = JSON.parse('{{ doc_ids | tojson | safe }}');
+    console.log("Initialized docIds:", docIds);  // Debug log
+    
+    // Verify the documents exist
+    if (!docIds || docIds.length === 0) {
+        console.error("No documents selected!");
+        document.getElementById('chat-box').innerHTML += `
+            <div class="error-message">
+                Error: No documents selected. Please go back and select documents.
+            </div>
+        `;
+    }
+</script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

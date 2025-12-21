@@ -1,0 +1,17 @@
+Flask==3.0.2
+Flask-Login==0.6.3
+Werkzeug==3.0.1
+PyPDF2==3.0.1
+sentence-transformers==2.2.2
+numpy==1.26.4
+faiss-cpu==1.7.4
+python-dotenv==1.0.0
+google-auth-oauthlib==0.4.6
+google-api-python-client==2.111.0
+groq==0.4.0
+pdfminer.six==20221105
+protobuf==3.20.3
+psycopg2-binary==2.9.9
+concurrent-log-handler==0.9.24
+gunicorn==21.2.0
+google-auth-httplib2==0.1.1

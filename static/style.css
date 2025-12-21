@@ -1,0 +1,1262 @@
+/* 🖤 MONOCHROMATIC MASTERPIECE - BLACK & WHITE PERFECTION 🤍 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Pure Black & White Palette */
+    --pure-black: #000000;
+    --pure-white: #ffffff;
+    --black-900: #0a0a0a;
+    --black-800: #141414;
+    --black-700: #1f1f1f;
+    --black-600: #2a2a2a;
+    --black-500: #3f3f3f;
+    --black-400: #525252;
+    --black-300: #737373;
+    --black-200: #a3a3a3;
+    --black-100: #d4d4d4;
+    --white-900: #f5f5f5;
+    --white-800: #f8f8f8;
+    --white-700: #fafafa;
+    --white-600: #fcfcfc;
+    --white-500: #fdfdfd;
+    --white-400: #fefefe;
+    
+    /* Gradients */
+    --gradient-black: linear-gradient(135deg, var(--pure-black) 0%, var(--black-700) 100%);
+    --gradient-white: linear-gradient(135deg, var(--pure-white) 0%, var(--white-900) 100%);
+    --gradient-fade: linear-gradient(135deg, var(--black-800) 0%, var(--black-600) 50%, var(--black-300) 100%);
+    --gradient-reverse: linear-gradient(135deg, var(--white-500) 0%, var(--black-100) 100%);
+    
+    /* Shadows */
+    --shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    --shadow-white: 0 0 0 1px rgba(255, 255, 255, 0.05);
+    
+    /* Typography */
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+    
+    /* Spacing & Effects */
+    --border-radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --blur: blur(20px);
+}
+
+/* Global Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.7;
+    color: var(--black-800);
+    background: var(--gradient-white);
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Subtle Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+        linear-gradient(45deg, transparent 48%, rgba(0, 0, 0, 0.01) 49%, rgba(0, 0, 0, 0.01) 51%, transparent 52%);
+    background-size: 200px 200px, 300px 300px, 50px 50px;
+    z-index: -1;
+    animation: subtleMove 30s linear infinite;
+}
+
+@keyframes subtleMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-50px, -50px); }
+}
+
+/* Elegant Header */
+header {
+    background: var(--gradient-black);
+    color: var(--pure-white);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: var(--blur);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-2xl);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(255, 255, 255, 0.3) 25%, 
+        rgba(255, 255, 255, 0.6) 50%, 
+        rgba(255, 255, 255, 0.3) 75%, 
+        transparent 100%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+header h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: -0.05em;
+    background: linear-gradient(135deg, 
+        var(--pure-white) 0%, 
+        var(--black-100) 50%, 
+        var(--pure-white) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: var(--white-800);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    position: relative;
+    transition: var(--transition);
+    letter-spacing: -0.01em;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: var(--blur);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-white);
+    border-radius: 50px;
+    opacity: 0;
+    transition: var(--transition);
+    z-index: -1;
+}
+
+nav a:hover {
+    color: var(--black-800);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-large);
+}
+
+nav a:hover::before {
+    opacity: 1;
+}
+
+/* Sophisticated Authentication Form */
+.auth-form {
+    max-width: 480px;
+    margin: 4rem auto;
+    padding: 4rem 3rem;
+    background: var(--pure-white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-2xl);
+    position: relative;
+    border: 1px solid var(--black-100);
+}
+
+.auth-form::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: var(--gradient-fade);
+    border-radius: 24px;
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.auth-form:hover::before {
+    opacity: 1;
+}
+
+.auth-form h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--black-800);
+    letter-spacing: -0.03em;
+    position: relative;
+}
+
+.auth-form h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: var(--gradient-black);
+    border-radius: 1px;
+}
+
+/* FIXED: Styled Register/Login Links */
+.auth-links {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--black-100);
+}
+
+.auth-links p {
+    color: var(--black-600);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.auth-links a {
+    color: var(--black-800);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    position: relative;
+    display: inline-block;
+    letter-spacing: -0.01em;
+}
+
+.auth-links a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--gradient-black);
+    transition: var(--transition);
+}
+
+.auth-links a:hover {
+    color: var(--pure-black);
+    background: var(--white-800);
+    transform: translateY(-1px);
+}
+
+.auth-links a:hover::before {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--black-700);
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    background: var(--white-700);
+    border: 2px solid var(--black-100);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--black-800);
+    transition: var(--transition);
+    letter-spacing: -0.01em;
+    font-family: var(--font-body);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--black-400);
+    background: var(--pure-white);
+    box-shadow: var(--shadow-medium), var(--shadow-inner);
+    transform: translateY(-1px);
+}
+
+.form-group input::placeholder {
+    color: var(--black-300);
+    font-weight: 400;
+}
+
+/* Premium Button Design */
+button {
+    background: var(--gradient-black);
+    color: var(--pure-white);
+    border: none;
+    padding: 1.25rem 2.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    letter-spacing: -0.01em;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-large);
+    border: 1px solid var(--black-600);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.2), 
+        transparent);
+    transition: left 0.6s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-2xl);
+    background: linear-gradient(135deg, var(--black-600) 0%, var(--pure-black) 100%);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+/* Elegant Dashboard */
+.dashboard {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 0 3rem;
+}
+
+/* FIXED: Removed hover effects that cause layout shifting */
+.upload-section, .documents-section {
+    margin-bottom: 3rem;
+    padding: 3rem;
+    background: var(--pure-white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--black-100);
+    position: relative;
+    /* Removed transition and hover effects */
+}
+
+.upload-section h2, .documents-section h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--black-800);
+    margin-bottom: 2rem;
+    letter-spacing: -0.03em;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.upload-section h2::after, .documents-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: var(--gradient-black);
+    border-radius: 2px;
+}
+
+/* FIXED: Hide default file input completely */
+input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* FIXED: Smaller, cleaner custom file input button */
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.file-input-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: var(--gradient-white);
+    color: var(--black-800);
+    border: 2px solid var(--black-300);
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    letter-spacing: -0.01em;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.file-input-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 0, 0, 0.1), 
+        transparent);
+    transition: left 0.5s;
+}
+
+.file-input-label:hover {
+    background: var(--gradient-black);
+    color: var(--pure-white);
+    border-color: var(--black-800);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.file-input-label:hover::before {
+    left: 100%;
+}
+
+.file-input-label::after {
+    content: '📁';
+    font-size: 1rem;
+}
+
+/* Luxurious Drag & Drop */
+#drop-area {
+    border: 3px dashed var(--black-300);
+    border-radius: 20px;
+    padding: 4rem 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    cursor: pointer;
+    background: var(--white-800);
+    position: relative;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+#drop-area::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-reverse);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+#drop-area::after {
+    content: '📎';
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    opacity: 0.7;
+    animation: gentleBounce 3s ease-in-out infinite;
+}
+
+@keyframes gentleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+#drop-area:hover {
+    border-color: var(--black-600);
+    background: var(--white-700);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-large);
+}
+
+#drop-area:hover::before {
+    opacity: 0.5;
+}
+
+#drop-area.highlight {
+    border-color: var(--black-800);
+    background: var(--black-900);
+    color: var(--pure-white);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-2xl);
+}
+
+#drop-area.highlight::before {
+    opacity: 1;
+    background: var(--gradient-black);
+}
+
+#drop-area p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--black-600);
+    letter-spacing: -0.01em;
+    position: relative;
+    z-index: 1;
+}
+
+#drop-area.highlight p {
+    color: var(--pure-white);
+}
+
+/* Fixed: Table Checkbox Styling - Make checkboxes visible and functional */
+table input[type="checkbox"] {
+    /* Reset the hidden checkbox styles for table checkboxes */
+    position: relative;
+    opacity: 1;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--pure-white);
+    border: 2px solid var(--black-300);
+    border-radius: 4px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+table input[type="checkbox"]:checked {
+    background: var(--gradient-black);
+    border-color: var(--black-600);
+    position: relative;
+}
+
+table input[type="checkbox"]:checked::before {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--pure-white);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+table input[type="checkbox"]:hover {
+    border-color: var(--black-500);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-medium);
+}
+
+table input[type="checkbox"]:focus {
+    outline: 2px solid var(--black-600);
+    outline-offset: 2px;
+}
+
+/* Premium Custom Checkbox (for other forms) */
+input[type="checkbox"]:not(table input[type="checkbox"]) {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-custom {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: var(--pure-white);
+    border: 2px solid var(--black-200);
+    border-radius: 6px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+}
+
+.checkbox-custom::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-black);
+    border-radius: 4px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: var(--transition);
+}
+
+.checkbox-custom::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: var(--pure-white);
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--transition);
+    z-index: 1;
+}
+
+input[type="checkbox"]:not(table input[type="checkbox"]):checked + .checkbox-custom {
+    border-color: var(--black-600);
+    background: var(--gradient-black);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-medium);
+}
+
+input[type="checkbox"]:not(table input[type="checkbox"]):checked + .checkbox-custom::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[type="checkbox"]:not(table input[type="checkbox"]):checked + .checkbox-custom::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+input[type="checkbox"]:not(table input[type="checkbox"]):hover + .checkbox-custom {
+    border-color: var(--black-400);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-medium);
+}
+
+input[type="checkbox"]:not(table input[type="checkbox"]):focus + .checkbox-custom {
+    outline: 2px solid var(--black-600);
+    outline-offset: 2px;
+}
+
+/* Sophisticated Table */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem 0;
+    background: var(--pure-white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-large);
+    border: 1px solid var(--black-100);
+}
+
+/* Add this to your existing CSS file to disable hover effects for tables with .no-hover-effect class */
+
+/* Disable hover effects for tables with no-hover-effect class */
+table.no-hover-effect tbody tr:hover {
+    background: transparent !important;
+}
+
+table.no-hover-effect tbody tr:hover::before {
+    display: none !important;
+}
+
+.file-input-label::after {
+    display: none !important;
+}
+
+th, td {
+    padding: 1.5rem 1.25rem;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--black-100);
+}
+
+th {
+    background: var(--gradient-white);
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--black-800);
+    font-size: 0.95rem;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+}
+
+tbody tr {
+    transition: var(--transition);
+    position: relative;
+}
+
+tbody tr:hover {
+    background: var(--white-800);
+}
+
+tbody tr:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--gradient-black);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Premium Chat Interface */
+.chat-container {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 3rem;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: var(--black-700);
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border: 2px solid var(--black-200);
+    border-radius: 50px;
+    background: var(--pure-white);
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+}
+
+.back-link:hover {
+    border-color: var(--black-600);
+    background: var(--black-800);
+    color: var(--pure-white);
+    transform: translateX(-5px);
+    box-shadow: var(--shadow-large);
+}
+
+.chat-box {
+    height: 600px;
+    border: 2px solid var(--black-200);
+    border-radius: 24px;
+    padding: 2.5rem;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+    background: var(--white-800);
+    box-shadow: var(--shadow-inner), var(--shadow-medium);
+    position: relative;
+}
+
+.chat-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+    border-radius: 22px;
+}
+
+.chat-message {
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    max-width: 75%;
+    animation: messageAppear 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    box-shadow: var(--shadow-medium);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.user-message {
+    background: var(--gradient-black);
+    color: var(--pure-white);
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+    border: 1px solid var(--black-600);
+}
+
+.bot-message {
+    background: var(--pure-white);
+    color: var(--black-800);
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+    border: 2px solid var(--black-100);
+    box-shadow: var(--shadow-light);
+}
+
+.chat-input {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--pure-white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-xl);
+    border: 2px solid var(--black-100);
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 1.25rem 2rem;
+    border: 2px solid var(--black-200);
+    border-radius: 50px;
+    font-size: 1rem;
+    background: var(--white-800);
+    color: var(--black-800);
+    transition: var(--transition);
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: var(--black-600);
+    background: var(--pure-white);
+    box-shadow: var(--shadow-medium);
+}
+
+#user-input::placeholder {
+    color: var(--black-300);
+    font-weight: 400;
+}
+
+/* Refined Action Buttons */
+.btn-download, .btn-delete {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.75rem;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    letter-spacing: -0.01em;
+    box-shadow: var(--shadow-light);
+}
+
+.btn-download {
+    background: var(--gradient-white);
+    color: var(--black-800);
+    border: 2px solid var(--black-200);
+}
+
+.btn-download:hover {
+    background: var(--gradient-black);
+    color: var(--pure-white);
+    border-color: var(--black-800);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-delete {
+    background: var(--gradient-black);
+    color: var(--pure-white);
+    border: 2px solid var(--black-600);
+}
+
+.btn-delete:hover {
+    background: var(--pure-black);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Elegant Status Messages */
+.success {
+    color: var(--black-800);
+    background: var(--white-700);
+    padding: 1.5rem 2rem;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--black-200);
+    margin: 1.5rem 0;
+    font-weight: 500;
+    box-shadow: var(--shadow-light);
+    border-left: 4px solid var(--black-600);
+}
+
+.error, .error-message {
+    color: var(--pure-white);
+    background: var(--gradient-black);
+    border: 2px solid var(--black-600);
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Sophisticated Loading */
+.loading {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid var(--black-200);
+    border-radius: 50%;
+    border-top: 3px solid var(--black-800);
+    animation: elegantSpin 1.2s linear infinite;
+}
+
+@keyframes elegantSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Responsive Elegance */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .dashboard, .chat-container {
+        padding: 0 1.5rem;
+        margin: 2rem auto;
+    }
+    
+    .auth-form {
+        margin: 2rem 1rem;
+        padding: 2.5rem 2rem;
+    }
+    
+    .upload-section, .documents-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .chat-box {
+        height: 500px;
+        padding: 2rem 1.5rem;
+    }
+    
+    .chat-message {
+        max-width: 85%;
+        padding: 1.25rem 1.5rem;
+    }
+    
+    #drop-area {
+        padding: 3rem 2rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 1rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .auth-form {
+        padding: 2rem 1.5rem;
+    }
+    
+    .chat-input {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    #user-input {
+        padding: 1rem 1.5rem;
+    }
+    
+    .file-input-label {
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--white-800);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-black);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--pure-black);
+}
+
+/* Professional Focus States */
+*:focus {
+    outline: 2px solid var(--black-600);
+    outline-offset: 2px;
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.gradient-text {
+    background: var(--gradient-black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Clean text-only styling for authentication links */
+.auth-nav p, .auth-links p, p:has(a[href*="/register"]), p:has(a[href*="/login"]) {
+    color: var(--black-600);
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+.auth-nav a, .auth-links a, a[href*="/register"], a[href*="/login"] {
+    color: var(--black-800) !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    letter-spacing: -0.01em !important;
+    transition: var(--transition) !important;
+    position: relative !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: inline !important;
+}
+
+.auth-nav a::before, .auth-links a::before, a[href*="/register"]::before, a[href*="/login"]::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: -2px !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 1px !important;
+    background: var(--black-800) !important;
+    transition: var(--transition) !important;
+}
+
+.auth-nav a:hover, .auth-links a:hover, a[href*="/register"]:hover, a[href*="/login"]:hover {
+    color: var(--pure-black) !important;
+    background: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.auth-nav a:hover::before, .auth-links a:hover::before, a[href*="/register"]:hover::before, a[href*="/login"]:hover::before {
+    width: 100% !important;
+}
+
+/* Premium Preview Button - Monochromatic Design */
+.btn-preview {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 2px solid var(--black-300);
+    cursor: pointer;
+    margin-right: 0.75rem;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    letter-spacing: -0.01em;
+    box-shadow: var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+    
+    /* Elegant gradient background */
+    background: var(--gradient-white);
+    color: var(--black-800);
+    
+    /* Subtle border enhancement */
+    border: 2px solid var(--black-200);
+}
+
+/* Shimmer effect before hover */
+.btn-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 0, 0, 0.1), 
+        transparent);
+    transition: left 0.5s ease;
+}
+
+/* Icon styling - adds a preview icon */
+.btn-preview::after {
+    content: '👁';
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+/* Hover state - inverts to black */
+.btn-preview:hover {
+    background: var(--gradient-black);
+    color: var(--pure-white);
+    border-color: var(--black-800);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Shimmer animation on hover */
+.btn-preview:hover::before {
+    left: 100%;
+}
+
+/* Icon animation on hover */
+.btn-preview:hover::after {
+    transform: scale(1.1);
+}
+
+/* Active state */
+.btn-preview:active {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-light);
+}
+
+/* Focus state for accessibility */
+.btn-preview:focus {
+    outline: 2px solid var(--black-600);
+    outline-offset: 2px;
+}
+
+/* Alternative modern style option */
+.btn-preview.modern {
+    background: var(--pure-white);
+    color: var(--black-800);
+    border: 1px solid var(--black-100);
+    border-radius: 8px;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-light);
+}
+
+.btn-preview.modern:hover {
+    background: var(--black-800);
+    color: var(--pure-white);
+    border-color: var(--black-600);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Minimalist style option */
+.btn-preview.minimal {
+    background: transparent;
+    color: var(--black-700);
+    border: 1px solid var(--black-300);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: none;
+}
+
+.btn-preview.minimal:hover {
+    background: var(--black-800);
+    color: var(--pure-white);
+    border-color: var(--black-800);
+    box-shadow: var(--shadow-light);
+}
+
+.btn-preview.minimal::after {
+    content: '↗';
+    font-size: 0.75rem;
+}

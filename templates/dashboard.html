@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Welcome, {{ current_user.username }}!</h2>
+    
+    <div class="upload-section">
+        <h3>Upload Documents</h3>
+        <form id="upload-form" method="POST" enctype="multipart/form-data">
+            <input type="file" id="file-upload" name="file" accept=".pdf" multiple>
+            <label for="file-upload" class="file-input-label">Choose File</label>
+            <div class="drop-area" id="drop-area">
+                <p>Or drag and drop PDF files here</p>
+            </div>
+        </form>
+        <div id="upload-status"></div>
+    </div>
+    
+    <div class="documents-section">
+        <h3>Your Documents</h3>
+        {% if documents %}
+        <form method="POST" action="{{ url_for('chat') }}">
+            <table class="no-hover-effect">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Filename</th>
+                        <th>Upload Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doc in documents %}
+                    <tr>
+                        <td><input type="checkbox" name="documents" value="{{ doc.id }}"></td>
+                        <td>{{ doc.filename }}</td>
+                        <td>{{ doc.upload_date }}</td>
+                        <td>
+                            <a href="{{ url_for('download', doc_id=doc.id) }}" class="btn-download">Download</a>
+                            <a href="{{ url_for('preview', doc_id=doc.id) }}" class="btn-preview" target="_blank">Preview</a>
+                            <button class="btn-delete" data-doc-id="{{ doc.id }}">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit">Chat with Selected Documents</button>
+        </form>
+        {% else %}
+        <p>No documents uploaded yet.</p>
+        {% endif %}
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}
