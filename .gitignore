@@ -1,54 +1,48 @@
-# Virtual Environments
+# Ignore node modules
+node_modules/
+*/node_modules/
+
+# Ignore Python virtual environment
+venv/
+env/
 docchat_env/
 new_env/
-env/
-venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Python
+*.pyc
 __pycache__/
+*.pyo
+*.pyd
 *.py[cod]
 *$py.class
 *.so
 .Python
 
-# Local Files
-token.json
-credentials.json
-.env
-*.whl
-profiler/
-
-# Uploads and Embeddings (these should be in cloud storage or persistent volumes)
+# Ignore uploads directory
 uploads/
 embeddings/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
 *.log
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Distribution / Packaging
+# Ignore sensitive files
+token.json
+credentials.json
+*.whl
+profiler/
 bin/
+
+# Ignore environment variables
+.env
+.env.local
+.env.*.local
+
+# Ignore build outputs
 build/
-develop-eggs/
 dist/
+*.egg-info/
+.next/
+out/
+develop-eggs/
 downloads/
 eggs/
 .eggs/
@@ -58,11 +52,41 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/
 .installed.cfg
 *.egg
 
-# Testing
-.pytest_cache/
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore model cache
+.cache/
+models/
+*.pt
+*.pth
+*.bin
+transformers_cache/
+
+# Ignore test coverage
 .coverage
 htmlcov/
+.pytest_cache/
+
+# Ignore temporary files
+*.tmp
+temp/
+tmp/
+
+# Ignore MongoDB data
+data/
+*.lock
+*.db
+*.sqlite
+*.sqlite3
